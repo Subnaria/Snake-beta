@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game V.0.1</title>
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/snake-emoji-2048x2048-efgxrgbp.png">
+    <link rel="stylesheet" href="/Contents/Games_Web/Snake_Game/Css/style_snake.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Snake Game V.0.1</h1>
+        <label for="username">Entrez votre pseudo :</label>
+        <input type="text" id="username" placeholder="Votre pseudo">
+        <button id="startButton">Jouer</button>
+        <div id="best-score">
+            <h3>Meilleur score: <span id="best-score-name"></span> - <span id="best-score-value"></span></h3>
+        </div>        
+    </div>
+
+    <div id="game-container" class="hidden">
+        <!-- Ajout de la barre de score en haut du canvas -->
+        <div id="score-bar"> <span id="scoreDisplay">0</span></div>
+        <canvas id="gameCanvas" width="300" height="300"></canvas> <!-- Plateau carré -->
+        <p id="message"></p>
+        <div id="game-over-buttons">
+            <button onclick="restartGame()">Rejouer</button>
+            <button onclick="returnToMenu()">Retour au menu</button>
+        </div>
+    </div>
+
+    <!-- Photo de profil en haut à gauche -->
+    <a href="/index.html" target="_blank">
+        <img id="profileImage" src="https://media.discordapp.net/attachments/1331600541599535169/1337128941546377387/ab67616d0000b273dc3e2814b407ab8912fe6094.png?ex=67a84c1e&is=67a6fa9e&hm=ec2bba7ab201725a46171738f222237bfc0fb039b6b5c7efbb8b1c80c19a2de3&=&format=webp&quality=lossless" alt="Profile Picture">
+    </a>
+
+    <div id="loading-screen">
+        <h1 id="loading-text">By Pacman <br><br>V.0.1</h1>
+    </div>    
+
+    <script src="/Contents/Games_Web/Snake_Game/Js/script_snake.js"></script>
+</body>
+<footer><h5>The game is in constant development</h5></footer>
+</html>
